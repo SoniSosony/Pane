@@ -1,0 +1,41 @@
+.grid img {
+  display: block;
+}
+
+.grid {
+  display: inline-block;
+  position: relative;
+  /* margin: 10px; */
+  vertical-align: top;
+  width: 700px;
+  height: 300px;
+}
+
+.grid::before,
+.grid::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.grid::after {
+  background: linear-gradient(to bottom, #000 2px, transparent 2px);
+  background-size: 10px 10px;
+}
+
+.grid::before {
+  background: linear-gradient(to right, #000 2px, transparent 2px);
+  background-size: 10px;
+}
+
+.grid::before {
+  box-shadow: inset 0px 0px 0 2px #000;
+}
+
+.fixed::before,
+.fixed::after {
+  background-size: 23px;
+}
